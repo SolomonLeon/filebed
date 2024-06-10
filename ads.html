@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>图片展示</title>
+<style>
+    .image-container {
+        width: 500px;
+        height: 500px;
+        margin: 50px auto;
+        position: relative;
+        perspective: 1000px;
+    }
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        border: 5px solid #f00;
+        box-shadow: 0 0 30px #f00;
+        transition: transform 1s;
+        position: absolute;
+        backface-visibility: hidden;
+    }
+    .image-container:hover img {
+        transform: rotateY(180deg);
+    }
+</style>
+</head>
+<body>
+<div class="image-container">
+    <img src="./ads.jpg" alt="广告图片">
+</div>
+</body>
+</html>
