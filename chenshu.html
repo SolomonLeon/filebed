@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>陈述的个人介绍</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+      }
+      #sidebar {
+        background-color: #ffff00;
+        color: #00e0e0;
+      }
+      #sidebar a {
+        color: #00e0e0;
+      }
+      #sidebar a:hover {
+        color: #ffffff;
+      }
+      #content h1,
+      #content h2 {
+        color: #00e0e0;
+      }
+      #content p {
+        color: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body class="h-screen flex overflow-hidden">
+    <button
+      id="toggleSidebar"
+      class="absolute top-0 left-0 p-4 focus:outline-none md:hidden bg-gray-900 text-white z-10"
+    >
+      ☰
+    </button>
+    <div
+      id="sidebar"
+      class="w-64 fixed h-screen flex flex-col justify-center items-center transform transition-transform -translate-x-full md:translate-x-0"
+      style="background-color: #ffff00"
+    >
+      <img
+        src="https://sfile.chatglm.cn/chatglm4/5e032ef4-47fc-4d51-9271-9aaa6da02c5c.png"
+        alt="头像"
+        class="mb-8 rounded-full w-24 h-24"
+      />
+      <nav class="flex flex-col space-y-4">
+        <a href="#about" class="text-yellow-400 hover:text-gray-50">关于我</a
+        ><a href="#education" class="text-yellow-400 hover:text-gray-50"
+          >教育经历</a
+        ><a href="#interests" class="text-yellow-400 hover:text-gray-50"
+          >兴趣特长</a
+        ><a href="#hobbies" class="text-yellow-400 hover:text-gray-50">爱好</a
+        ><a href="#video" class="text-yellow-400 hover:text-gray-50"
+          >音游视频</a
+        >
+        <a href="#game" class="text-yellow-400 hover:text-gray-50">在线游戏</a>
+      </nav>
+    </div>
+    <div id="content" class="flex-1 p-8 md:pl-72 pt-20 overflow-auto">
+      <h1 class="text-4xl font-bold mb-8 text-gray-900">欢迎您</h1>
+      <h2 id="about" class="text-2xl font-bold mb-4 text-blue-900 pt-12">
+        关于我
+      </h2>
+      <p class="text-gray-900">我是陈述，一名19岁的广告学专业学生。</p>
+      <h2 id="education" class="text-2xl font-bold mb-4 text-blue-900 pt-12">
+        教育经历
+      </h2>
+      <p class="text-gray-900">
+        我目前就读于广告学专业，正在学习广告创意与策划、市场营销等相关课程。
+      </p>
+      <h2 id="interests" class="text-2xl font-bold mb-4 text-blue-900 pt-12">
+        兴趣特长
+      </h2>
+      <p class="text-gray-900">
+        我热爱绘画、摄影和写作，这些艺术形式让我能够表达自己的想法和情感。
+      </p>
+      <h2 id="hobbies" class="text-2xl font-bold mb-4 text-blue-900 pt-12">
+        爱好
+      </h2>
+      <p class="text-gray-900">
+        在休闲时间，我喜欢听摇滚乐和打音游，它们给我带来能量和灵感。
+      </p>
+      <h2 id="video" class="text-2xl font-bold mb-4 pt-12">音游视频</h2>
+      <iframe
+        src="https://player.bilibili.com/player.html?aid=1804404303&bvid=BV1Vb421b7h9&cid=1540960949&p=1"
+        scrolling="no"
+        border="0"
+        frameborder="no"
+        framespacing="0"
+        allowfullscreen="true"
+      >
+      </iframe>
+      <h2 id="game" class="text-2xl font-bold mb-4 text-blue-900 pt-12">
+        游戏
+      </h2>
+      <iframe
+        src="./game.html"
+        border="0"
+        frameborder="no"
+        framespacing="0"
+        allowfullscreen="true"
+        class="w-full h-full"
+      ></iframe>
+    </div>
+    <script>
+      document
+        .getElementById("toggleSidebar")
+        .addEventListener("click", function () {
+          const sidebar = document.getElementById("sidebar");
+          sidebar.classList.toggle("-translate-x-full");
+        });
+    </script>
+  </body>
+</html>
